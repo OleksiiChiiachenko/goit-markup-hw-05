@@ -215,6 +215,7 @@ button {
     padding: 24px 0 24px 0;
     display: block;
     gap: 40px;
+    color: #404bbf;
 
     transition: color var(--active-color);
     transition: color var(--animation-speed);
@@ -270,8 +271,9 @@ button {
     padding-bottom: 24px;
     display: block;
 
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: color var(--active-color);
-    transition: color: var(--animation-speed);
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
