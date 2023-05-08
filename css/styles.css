@@ -217,7 +217,7 @@ button {
     gap: 40px;
 
     transition: color var(--active-color);
-    transition: color: var(--animation-speed);
+    transition: color var(--animation-speed);
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
@@ -238,6 +238,8 @@ button {
     height: 4px;
     border-radius: 2px;
     bottom: -1px;
+
+    color: var(--active-color);
 }
 
 .header-link.active::after {
@@ -560,9 +562,9 @@ button {
     align-items: center;
     color: var(--color-light-slate);
 
-    transition: color var(--animation-speed);
-    transition: border-color var(--animation-speed);
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color var(--animation-speed) cubic-bezier(0.4, 0, 0.2, 1),
+        color var(--animation-speed) cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .customer-link:hover,
@@ -610,7 +612,7 @@ button {
     border-radius: 4px;
     border: 1px solid var(--color-cornflower);
 
-    transition: color cubic-bezier(0.4, 0, 0.2, 1),
+    transition: color var(--animation-speed) cubic-bezier(0.4, 0, 0.2, 1),
         background-color var(--animation-speed) cubic-bezier(0.4, 0, 0.2, 1),
         border-color var(--animation-speed) cubic-bezier(0.4, 0, 0.2, 1),
         box-shadow var(--animation-speed) cubic-bezier(0.4, 0, 0.2, 1);
@@ -663,6 +665,7 @@ button {
     left: 0;
 
     transform: translateY(100%);
+
     background-color: var(--acent-color);
     mix-blend-mode: normal;
     transition: transform var(--animation-speed);
@@ -678,12 +681,20 @@ button {
 .overlay-text {
     color: var(--light-bg-color);
     padding: 40px 32px 164px 32px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    padding: 40px 32px;
+
+    transition: transform var(--animation-speed) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.overlay-text:hover,
-.overlay-text:focus {
-    transform: translateY(0%);
+.projects-link:hover .overlay-text,
+.projects-link:focus .overlay-text {
+    transform: translateY(0);
 }
+
+
+
 
 .container-projects {
     padding: 32px 16px;
@@ -836,6 +847,7 @@ button {
 .modal-close-btn:focus {
     background-color: var(--active-color);
     border: none;
+    fill: #ffffff;
 }
 
 .modal-close-icon {
