@@ -95,18 +95,6 @@ button {
     cursor: pointer;
 }
 
-.btn-primary {
-    border: 1px transparent;
-    border-radius: 4px;
-
-    transition: var(--animation-speed);
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.btn-primary:hover,
-.btn-primary:focus {
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-}
 
 /* card set */
 .card-set {
@@ -151,6 +139,7 @@ button {
     position: fixed;
     top: 0;
     width: 100%;
+    background-color: var(--primary-text-white-color);
     border-bottom: 1px solid var(--color-cornflower);
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
     z-index: var(--header-idx);
@@ -214,14 +203,17 @@ button {
     letter-spacing: 0.02em;
     padding: 24px 0 24px 0;
     display: block;
-    gap: 40px;
-    color: #404bbf;
 
-    transition: color var(--active-color);
-    transition: color var(--animation-speed);
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--animation-speed) cubic-bezier(0.4, 0, 0.2, 1);
 
 }
+
+.header-link.active {
+    color: var(--active-color);
+    transition: color var(--animation-speed) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
 
 .header-link:hover,
 .header-link:focus {
@@ -294,6 +286,7 @@ button {
     background-position: center;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 73px;
     background-size: cover;
     background-color: var(--dark-bg-color);
     text-align: center;
@@ -341,8 +334,7 @@ button {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
 
-    transition: background-color var(--animation-speed);
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color var(--animation-speed) cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -485,14 +477,14 @@ button {
     justify-content: center;
     gap: 24px;
     align-items: center;
+
 }
 
 .footer-soc-list {
     display: flex;
     gap: 16px;
 
-    transition: background-color var(--animation-speed);
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color var(--animation-speed) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socials-item {
@@ -509,8 +501,7 @@ button {
     height: 100%;
     background-color: var(--acent-color);
 
-    transition: background-color var(--animation-speed);
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color var(--animation-speed) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link {}
@@ -562,6 +553,7 @@ button {
     align-items: center;
     color: var(--color-light-slate);
 
+
     transition: border-color var(--animation-speed) cubic-bezier(0.4, 0, 0.2, 1),
         color var(--animation-speed) cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -583,7 +575,8 @@ button {
 
 /* content section */
 .content {
-    padding-top: 96px;
+    padding-top: 169px;
+
 }
 
 .content-list {
@@ -676,14 +669,11 @@ button {
     transform: translateY(0);
 }
 
-
-
 .overlay-text {
     color: var(--light-bg-color);
     padding: 40px 32px 164px 32px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    padding: 40px 32px;
 
     transition: transform var(--animation-speed) cubic-bezier(0.4, 0, 0.2, 1);
 }
